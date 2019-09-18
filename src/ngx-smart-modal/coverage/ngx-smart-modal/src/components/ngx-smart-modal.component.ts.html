@@ -1,0 +1,1034 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for ngx-smart-modal/src/components/ngx-smart-modal.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">ngx-smart-modal/src/components</a> ngx-smart-modal.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">84.39% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>146/173</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">45.1% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>23/51</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">95% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>19/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">81.76% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>121/148</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {
+  Input,
+  Output,
+  OnInit,
+  OnDestroy,
+  Renderer2,
+  Component,
+  EventEmitter,
+  HostListener,
+  ChangeDetectorRef, ViewChild, ElementRef,
+} from '@angular/core';
+&nbsp;
+import { NgxSmartModalService } from '../services/ngx-smart-modal.service';
+&nbsp;
+@Component({
+  selector: 'ngx-smart-modal',
+  template: `
+    &lt;div *ngIf="overlayVisible"
+         [style.z-index]="visible ? layerPosition-1 : -1"
+         [ngClass]="{'transparent':!backdrop, 'overlay':true, 'nsm-overlay-open':openedClass}"
+         (click)="dismiss($event)" #nsmOverlay&gt;
+      &lt;div [style.z-index]="visible ? layerPosition : -1"
+           [ngClass]="['nsm-dialog', customClass, openedClass ? 'nsm-dialog-open': 'nsm-dialog-close']" #nsmDialog&gt;
+        &lt;div class="nsm-content" #nsmContent&gt;
+          &lt;div class="nsm-body"&gt;
+            &lt;ng-content&gt;&lt;/ng-content&gt;
+          &lt;/div&gt;
+          &lt;button type="button" *ngIf="closable" (click)="close()" aria-label="Close" class="nsm-dialog-btn-close"&gt;
+            &lt;img
+              src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTUwNS45NDMsNi4wNThjLTguMDc3LTguMDc3LTIxLjE3Mi04LjA3Ny0yOS4yNDksMEw2LjA1OCw0NzYuNjkzYy04LjA3Nyw4LjA3Ny04LjA3NywyMS4xNzIsMCwyOS4yNDkgICAgQzEwLjA5Niw1MDkuOTgyLDE1LjM5LDUxMiwyMC42ODMsNTEyYzUuMjkzLDAsMTAuNTg2LTIuMDE5LDE0LjYyNS02LjA1OUw1MDUuOTQzLDM1LjMwNiAgICBDNTE0LjAxOSwyNy4yMyw1MTQuMDE5LDE0LjEzNSw1MDUuOTQzLDYuMDU4eiIgZmlsbD0iIzAwMDAwMCIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTUwNS45NDIsNDc2LjY5NEwzNS4zMDYsNi4wNTljLTguMDc2LTguMDc3LTIxLjE3Mi04LjA3Ny0yOS4yNDgsMGMtOC4wNzcsOC4wNzYtOC4wNzcsMjEuMTcxLDAsMjkuMjQ4bDQ3MC42MzYsNDcwLjYzNiAgICBjNC4wMzgsNC4wMzksOS4zMzIsNi4wNTgsMTQuNjI1LDYuMDU4YzUuMjkzLDAsMTAuNTg3LTIuMDE5LDE0LjYyNC02LjA1N0M1MTQuMDE4LDQ5Ny44NjYsNTE0LjAxOCw0ODQuNzcxLDUwNS45NDIsNDc2LjY5NHoiIGZpbGw9IiMwMDAwMDAiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" /&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  `
+})
+export class NgxSmartModalComponent implements OnInit, OnDestroy {
+  @Input() public closable: boolean = true;
+  @Input() public escapable: boolean = true;
+  @Input() public dismissable: boolean = true;
+  @Input() public identifier: string = '';
+  @Input() public customClass: string = 'nsm-dialog-animation-fade';
+  @Input() public visible: boolean = false;
+  @Input() public backdrop: boolean = true;
+  @Input() public force: boolean = true;
+  @Input() public hideDelay: number = 500;
+  @Input() public autostart: boolean = false;
+  @Input() public target: any;
+&nbsp;
+  @Output() public visibleChange: EventEmitter&lt;boolean&gt; = new EventEmitter&lt;boolean&gt;();
+  @Output() public onClose: EventEmitter&lt;any&gt; = new EventEmitter();
+  @Output() public onCloseFinished: EventEmitter&lt;any&gt; = new EventEmitter();
+  @Output() public onDismiss: EventEmitter&lt;any&gt; = new EventEmitter();
+  @Output() public onDismissFinished: EventEmitter&lt;any&gt; = new EventEmitter();
+  @Output() public onAnyCloseEvent: EventEmitter&lt;any&gt; = new EventEmitter();
+  @Output() public onAnyCloseEventFinished: EventEmitter&lt;any&gt; = new EventEmitter();
+  @Output() public onOpen: EventEmitter&lt;any&gt; = new EventEmitter();
+  @Output() public onEscape: EventEmitter&lt;any&gt; = new EventEmitter();
+  @Output() public onDataAdded: EventEmitter&lt;any&gt; = new EventEmitter();
+  @Output() public onDataRemoved: EventEmitter&lt;any&gt; = new EventEmitter();
+&nbsp;
+  public layerPosition: number = 1041;
+  public overlayVisible: boolean = false;
+  public openedClass: boolean = false;
+&nbsp;
+  private _data: any;
+&nbsp;
+  @ViewChild('nsmContent') private nsmContent: ElementRef | undefined;
+  @ViewChild('nsmDialog') private nsmDialog: ElementRef | undefined;
+  @ViewChild('nsmOverlay') private nsmOverlay: ElementRef | undefined;
+&nbsp;
+  constructor(
+    private _renderer: Renderer2,
+    private _changeDetectorRef: ChangeDetectorRef,
+    private _ngxSmartModalService: NgxSmartModalService
+  ) { }
+&nbsp;
+  public ngOnInit() {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (!!this.identifier &amp;&amp; this.identifier.length) {
+      this.layerPosition += this._ngxSmartModalService.getModalStackCount();
+      this._ngxSmartModalService.addModal({ id: this.identifier, modal: this }, this.force);
+&nbsp;
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (this.autostart) {
+<span class="cstat-no" title="statement not covered" >        this._ngxSmartModalService.open(this.identifier);</span>
+      }
+    } else {
+<span class="cstat-no" title="statement not covered" >      throw new Error('identifier field isn’t set. Please set one before calling &lt;ngx-smart-modal&gt; in a template.');</span>
+    }
+  }
+&nbsp;
+  public ngOnDestroy() {
+    this._ngxSmartModalService.removeModal(this.identifier);
+    window.removeEventListener('keyup', this.escapeKeyboardEvent);
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (!this._ngxSmartModalService.getModalStack.length) {
+      this._renderer.removeClass(document.body, 'dialog-open');
+    }
+  }
+&nbsp;
+  /**
+   * Open the modal instance
+   *
+   * @param top open the modal top of all other
+   */
+  public open(top?: boolean): void {
+    if (top) {
+      this.layerPosition = this._ngxSmartModalService.getHigherIndex();
+    }
+&nbsp;
+    this._renderer.addClass(document.body, 'dialog-open');
+    this.overlayVisible = true;
+    this.visible = true;
+&nbsp;
+    setTimeout(() =&gt; {
+      this.openedClass = true;
+&nbsp;
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (this.target) {
+<span class="cstat-no" title="statement not covered" >        this.targetPlacement();</span>
+      }
+&nbsp;
+      this._changeDetectorRef.markForCheck();
+    });
+&nbsp;
+    this.onOpen.emit(this);
+&nbsp;
+    if (this.escapable) {
+      window.addEventListener('keyup', this.escapeKeyboardEvent);
+    }
+  }
+&nbsp;
+  /**
+   * Close the modal instance
+   */
+  public close(): void {
+    const me = this;
+&nbsp;
+    this.openedClass = false;
+    this.onClose.emit(this);
+    this.onAnyCloseEvent.emit(this);
+&nbsp;
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (this._ngxSmartModalService.getOpenedModals().length &lt; 2) {
+      this._renderer.removeClass(document.body, 'dialog-open');
+    }
+&nbsp;
+    setTimeout(() =&gt; {
+      me.visibleChange.emit(me.visible);
+      me.visible = false;
+      me.overlayVisible = false;
+      me._changeDetectorRef.markForCheck();
+      me.onCloseFinished.emit(me);
+      me.onAnyCloseEventFinished.emit(me);
+    }, this.hideDelay);
+&nbsp;
+    window.removeEventListener('keyup', this.escapeKeyboardEvent);
+  }
+&nbsp;
+  /**
+   * Dismiss the modal instance
+   *
+   * @param e the event sent by the browser
+   */
+  public dismiss(e: any): void {
+    const me = this;
+&nbsp;
+    if (!this.dismissable) {
+      return;
+    }
+&nbsp;
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (e.target.classList.contains('overlay')) {
+      this.openedClass = false;
+      this.onDismiss.emit(this);
+      this.onAnyCloseEvent.emit(this);
+&nbsp;
+      <span class="missing-if-branch" title="else path not taken" >E</span>if (this._ngxSmartModalService.getOpenedModals().length &lt; 2) {
+        this._renderer.removeClass(document.body, 'dialog-open');
+      }
+&nbsp;
+      setTimeout(() =&gt; {
+        me.visible = false;
+        me.visibleChange.emit(me.visible);
+        me.overlayVisible = false;
+        me._changeDetectorRef.markForCheck();
+        me.onDismissFinished.emit(me);
+        me.onAnyCloseEventFinished.emit(me);
+      }, this.hideDelay);
+&nbsp;
+      window.removeEventListener('keyup', this.escapeKeyboardEvent);
+    }
+  }
+&nbsp;
+  /**
+   * Toggle visibility of the modal instance
+   *
+   * @param top open the modal top of all other
+   */
+  public toggle(top?: boolean) {
+    if (this.visible) {
+      this.close();
+    } else {
+      this.open(top);
+    }
+  }
+&nbsp;
+  /**
+   * Add a custom class to the modal instance
+   *
+   * @param className the class to add
+   */
+  public addCustomClass(className: string): void {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (!this.customClass.length) {
+<span class="cstat-no" title="statement not covered" >      this.customClass = className;</span>
+    } else {
+      this.customClass += ' ' + className;
+    }
+  }
+&nbsp;
+  /**
+   * Remove a custom class to the modal instance
+   *
+   * @param className the class to remove
+   */
+  public removeCustomClass(className?: string): void {
+    if (className) {
+      this.customClass = this.customClass.replace(className, '').trim();
+    } else {
+      this.customClass = '';
+    }
+  }
+&nbsp;
+  /**
+   * Returns the visibility state of the modal instance
+   */
+  public isVisible(): boolean {
+    return this.visible;
+  }
+&nbsp;
+  /**
+   * Checks if data is attached to the modal instance
+   */
+  public hasData(): boolean {
+    return this._data !== undefined;
+  }
+&nbsp;
+  /**
+   * Attach data to the modal instance
+   *
+   * @param data the data to attach
+   * @param force override potentially attached data
+   */
+  public setData(data: any, force?: boolean): any {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (!this.hasData() || (<span class="branch-1 cbranch-no" title="branch not covered" >this.hasData() </span>&amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >force)</span>) {
+      this._data = data;
+      this.onDataAdded.emit(this._data);
+      this._changeDetectorRef.markForCheck();
+    }
+  }
+&nbsp;
+  /**
+   * Retrieve the data attached to the modal instance
+   */
+  public getData(): any {
+    return this._data;
+  }
+&nbsp;
+  /**
+   * Remove the data attached to the modal instance
+   */
+  public removeData(): void {
+    this._data = undefined;
+    this.onDataRemoved.emit(true);
+    this._changeDetectorRef.markForCheck();
+  }
+&nbsp;
+  /**
+   * Close the latest opened modal if escape key event is emitted
+   */
+  public escapeKeyboardEvent = (event: KeyboardEvent) =&gt; {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (event.keyCode === 27) {
+<span class="cstat-no" title="statement not covered" >      if (this.layerPosition === this._ngxSmartModalService.getTopOpenedModal().layerPosition) {</span>
+<span class="cstat-no" title="statement not covered" >        this.onEscape.emit(this);</span>
+<span class="cstat-no" title="statement not covered" >        this._ngxSmartModalService.closeLatestModal();</span>
+      }
+    }
+  }
+&nbsp;
+  /**
+   * Listens for window resize event and recalculates modal instance position if it is element-relative
+   */
+  @HostListener('window:resize')
+<span class="fstat-no" title="function not covered" >  public targetPlacement() {</span>
+<span class="cstat-no" title="statement not covered" >    if (!this.nsmDialog || !this.nsmContent || !this.nsmOverlay || !this.target) {</span>
+<span class="cstat-no" title="statement not covered" >      return;</span>
+    }
+&nbsp;
+    const targetElementRect = <span class="cstat-no" title="statement not covered" >document.querySelector(this.target).getBoundingClientRect();</span>
+    const bodyRect = <span class="cstat-no" title="statement not covered" >this.nsmOverlay.nativeElement.getBoundingClientRect();</span>
+&nbsp;
+    const nsmContentRect = <span class="cstat-no" title="statement not covered" >this.nsmContent.nativeElement.getBoundingClientRect();</span>
+    const nsmDialogRect = <span class="cstat-no" title="statement not covered" >this.nsmDialog.nativeElement.getBoundingClientRect();</span>
+&nbsp;
+    const marginLeft = <span class="cstat-no" title="statement not covered" >parseInt(getComputedStyle(this.nsmContent.nativeElement).marginLeft as any, 10);</span>
+    const marginTop = <span class="cstat-no" title="statement not covered" >parseInt(getComputedStyle(this.nsmContent.nativeElement).marginTop as any, 10);</span>
+&nbsp;
+    let offsetTop = <span class="cstat-no" title="statement not covered" >targetElementRect.top - nsmDialogRect.top - ((nsmContentRect.height - targetElementRect.height) / 2);</span>
+    let offsetLeft = <span class="cstat-no" title="statement not covered" >targetElementRect.left - nsmDialogRect.left - ((nsmContentRect.width - targetElementRect.width) / 2);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (offsetLeft + nsmDialogRect.left + nsmContentRect.width + (marginLeft * 2) &gt; bodyRect.width) {</span>
+<span class="cstat-no" title="statement not covered" >      offsetLeft = bodyRect.width - (nsmDialogRect.left + nsmContentRect.width) - (marginLeft * 2);</span>
+    } else <span class="cstat-no" title="statement not covered" >if (offsetLeft + nsmDialogRect.left &lt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >      offsetLeft = -nsmDialogRect.left;</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (offsetTop + nsmDialogRect.top + nsmContentRect.height + marginTop &gt; bodyRect.height) {</span>
+<span class="cstat-no" title="statement not covered" >      offsetTop = bodyRect.height - (nsmDialogRect.top + nsmContentRect.height) - marginTop;</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (offsetTop &lt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >      offsetTop = 0;</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this._renderer.setStyle(this.nsmContent.nativeElement, 'top', offsetTop + 'px');</span>
+<span class="cstat-no" title="statement not covered" >    this._renderer.setStyle(this.nsmContent.nativeElement, 'left', offsetLeft + 'px');</span>
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Feb 28 2019 09:48:36 GMT+0100 (heure normale d’Europe centrale)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

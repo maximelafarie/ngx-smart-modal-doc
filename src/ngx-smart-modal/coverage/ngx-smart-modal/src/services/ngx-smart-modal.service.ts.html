@@ -1,0 +1,734 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for ngx-smart-modal/src/services/ngx-smart-modal.service.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">ngx-smart-modal/src/services</a> ngx-smart-modal.service.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">79.73% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>59/74</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">46.67% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>14/30</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">73.08% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>19/26</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">79.69% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>51/64</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Injectable } from '@angular/core';
+import { NgxSmartModalComponent } from '../../';
+import { ModalInstance } from './modal-instance';
+&nbsp;
+@Injectable()
+export class NgxSmartModalService {
+  public modalStack: ModalInstance[] = [];
+&nbsp;
+  /**
+   * Add a new modal instance. This step is essential and allows to retrieve any modal at any time.
+   * It stores an object that contains the given modal identifier and the modal itself directly in the `modalStack`.
+   *
+   * @param modalInstance The object that contains the given modal identifier and the modal itself.
+   * @param force Optional parameter that forces the overriding of modal instance if it already exists.
+   * @returns nothing special.
+   */
+  public addModal(modalInstance: ModalInstance, force?: boolean): void {
+    if (force) {
+      const i: number = this.modalStack.findIndex(<span class="fstat-no" title="function not covered" >(</span>o: ModalInstance) =&gt; <span class="cstat-no" title="statement not covered" >o.id === modalInstance.id)</span>;
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (i &gt; -1) {
+<span class="cstat-no" title="statement not covered" >        this.modalStack[i].modal = modalInstance.modal;</span>
+      } else {
+        this.modalStack.push(modalInstance);
+      }
+      return;
+    }
+    this.modalStack.push(modalInstance);
+  }
+&nbsp;
+  /**
+   * Retrieve a modal instance by its identifier.
+   *
+   * @param id The modal identifier used at creation time.
+   */
+  public getModal(id: string): NgxSmartModalComponent {
+    const i = this.modalStack.find((o: ModalInstance) =&gt; o.id === id);
+&nbsp;
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (i !== undefined) {
+      return i.modal
+    } else {
+<span class="cstat-no" title="statement not covered" >      throw new Error(`Cannot find modal with identifier ${id}`);</span>
+    }
+  }
+&nbsp;
+  /**
+   * Alias of `getModal` to retrieve a modal instance by its identifier.
+   *
+   * @param id The modal identifier used at creation time.
+   */
+  public get(id: string): NgxSmartModalComponent {
+    return this.getModal(id);
+  }
+&nbsp;
+  /**
+   * Open a given modal
+   *
+   * @param id The modal identifier used at creation time.
+   * @param force Tell the modal to open top of all other opened modals
+   */
+  public open(id: string, <span class="missing-if-branch" title="else path not taken" >E</span>force = false): void {
+    let i
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (i = this.get(id)) {
+      i.open(force);
+    }
+  }
+&nbsp;
+  /**
+   * Close a given modal
+   *
+   * @param id The modal identifier used at creation time.
+   */
+  public close(id: string): void {
+    let i
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (i = this.get(id)) {
+      i.close();
+    }
+  }
+&nbsp;
+  /**
+   * Toggles a given modal
+   * If the retrieved modal is opened it closes it, else it opens it.
+   *
+   * @param id The modal identifier used at creation time.
+   * @param force Tell the modal to open top of all other opened modals
+   */
+  public toggle(id: string, <span class="missing-if-branch" title="else path not taken" >E</span>force = false): void {
+    let i
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (i = this.get(id)) {
+      i.toggle(force);
+    }
+  }
+&nbsp;
+  /**
+   * Retrieve all the created modals.
+   *
+   * @returns an array that contains all modal instances.
+   */
+<span class="fstat-no" title="function not covered" >  public getModalStack(): ModalInstance[] {</span>
+<span class="cstat-no" title="statement not covered" >    return this.modalStack;</span>
+  }
+&nbsp;
+  /**
+   * Retrieve all the opened modals. It looks for all modal instances with their `visible` property set to `true`.
+   *
+   * @returns an array that contains all the opened modals.
+   */
+  public getOpenedModals(): ModalInstance[] {
+    return this.modalStack.filter((o: ModalInstance) =&gt; o.modal.visible);
+  }
+&nbsp;
+  /**
+   * Retrieve the opened modal with highest z-index.
+   *
+   * @returns the opened modal with highest z-index.
+   */
+<span class="fstat-no" title="function not covered" >  public getTopOpenedModal(): NgxSmartModalComponent {</span>
+<span class="cstat-no" title="statement not covered" >    if (!this.getOpenedModals().length) {</span>
+<span class="cstat-no" title="statement not covered" >      throw new Error('No modal is opened');</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return this.getOpenedModals()</span>
+      .map(<span class="fstat-no" title="function not covered" >(</span>o: ModalInstance) =&gt; <span class="cstat-no" title="statement not covered" >o.modal)</span>
+      .reduce(<span class="fstat-no" title="function not covered" >(</span>highest, item) =&gt; <span class="cstat-no" title="statement not covered" >item.layerPosition &gt; highest.layerPosition ? item : highest,</span> this.getOpenedModals()[0].modal);
+  }
+&nbsp;
+  /**
+   * Get the higher `z-index` value between all the modal instances. It iterates over the `ModalStack` array and
+   * calculates a higher value (it takes the highest index value between all the modal instances and adds 1).
+   * Use it to make a modal appear foreground.
+   *
+   * @returns a higher index from all the existing modal instances.
+   */
+  public getHigherIndex(): number {
+    return Math.max(...this.modalStack.map(<span class="fstat-no" title="function not covered" >o =&gt; <span class="cstat-no" title="statement not covered" >o.modal.layerPosition)</span>, 1041) + 1;</span>
+  }
+&nbsp;
+  /**
+   * It gives the number of modal instances. It's helpful to know if the modal stack is empty or not.
+   *
+   * @returns the number of modal instances.
+   */
+  public getModalStackCount(): number {
+    return this.modalStack.length;
+  }
+&nbsp;
+  /**
+   * Remove a modal instance from the modal stack.
+   *
+   * @param id The modal identifier.
+   * @returns the removed modal instance.
+   */
+  public removeModal(id: string): void {
+    const i: number = this.modalStack.findIndex((o: any) =&gt; o.id === id);
+    if (i &gt; -1) {
+      this.modalStack.splice(i, 1);
+    } else {
+      // throw new Error(`Cannot find modal with identifier ${id}`);
+    }
+  }
+&nbsp;
+  /**
+   * Associate data to an identified modal. If the modal isn't already associated to some data, it creates a new
+   * entry in the `modalData` array with its `id` and the given `data`. If the modal already has data, it rewrites
+   * them with the new ones. Finally if no modal found it returns an error message in the console and false value
+   * as method output.
+   *
+   * @param data The data you want to associate to the modal.
+   * @param id The modal identifier.
+   * @param force If true, overrides the previous stored data if there was.
+   * @returns true if the given modal exists and the process has been tried, either false.
+   */
+  public setModalData(data: any, id: string, force?: boolean): boolean {
+    let i;
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (i = this.get(id)) {
+      i.setData(data, force);
+      return true;
+    } else {
+<span class="cstat-no" title="statement not covered" >      return false;</span>
+    }
+  }
+&nbsp;
+  /**
+   * Retrieve modal data by its identifier.
+   *
+   * @param id The modal identifier used at creation time.
+   * @returns the associated modal data.
+   */
+  public getModalData(id: string): any {
+    let i
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (i = this.get(id)) {
+      return i.getData();
+    }
+  }
+&nbsp;
+  /**
+   * Reset the data attached to a given modal.
+   *
+   * @param id The modal identifier used at creation time.
+   * @returns the removed data or false if modal doesn't exist.
+   */
+  public resetModalData(id: string): any | boolean {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (!!this.modalStack.find((o: ModalInstance) =&gt; o.id === id)) {
+      const removed: any = this.getModal(id).getData();
+      this.getModal(id).removeData();
+      return removed;
+    } else {
+<span class="cstat-no" title="statement not covered" >      return false;</span>
+    }
+  }
+&nbsp;
+  /**
+   * Close the latest opened modal if it has been declared as escapable
+   * Using a debounce system because one or more modals could be listening
+   * escape key press event.
+   */
+<span class="fstat-no" title="function not covered" >  public closeLatestModal(): void {</span>
+<span class="cstat-no" title="statement not covered" >    if (!this.getOpenedModals().length) {</span>
+<span class="cstat-no" title="statement not covered" >      return;</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.getTopOpenedModal().close();</span>
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Feb 28 2019 09:48:36 GMT+0100 (heure normale d’Europe centrale)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
